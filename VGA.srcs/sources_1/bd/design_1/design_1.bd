@@ -1,0 +1,265 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x8B574EBB25508F75",
+      "device": "xc7z010clg400-1",
+      "gen_directory": "../../../../VGA.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "my_vga_project_0": "",
+      "clk_wiz_0": "",
+      "proc_sys_reset_0": ""
+    },
+    "ports": {
+      "CLK_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "RSTN_0",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "design_1_CLK_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "RSTN_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "HSYNC_0": {
+        "direction": "O"
+      },
+      "VSYNC_0": {
+        "direction": "O"
+      },
+      "RGB_OUT_0": {
+        "direction": "O",
+        "left": "11",
+        "right": "0"
+      }
+    },
+    "components": {
+      "my_vga_project_0": {
+        "vlnv": "xilinx.com:module_ref:my_vga_project:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_my_vga_project_0_0",
+        "xci_path": "ip\\design_1_my_vga_project_0_0\\design_1_my_vga_project_0_0.xci",
+        "inst_hier_path": "my_vga_project_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "my_vga_project",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "CLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "RSTN",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_CLK_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "RSTN": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "PIXEL_CLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "PIXEL_CLK_RSTN",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "25173966",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "PIXEL_CLK_RSTN": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "HSYNC": {
+            "direction": "O"
+          },
+          "VSYNC": {
+            "direction": "O"
+          },
+          "RGB_OUT": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "ip_revision": "15",
+        "xci_name": "design_1_clk_wiz_0_0",
+        "xci_path": "ip\\design_1_clk_wiz_0_0\\design_1_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "80.0"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "281.423"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "365.405"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "25.175"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "61.500"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "8.000"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "43.625"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "7"
+          },
+          "PRIM_IN_FREQ": {
+            "value": "125.000"
+          },
+          "RESET_PORT": {
+            "value": "resetn"
+          },
+          "RESET_TYPE": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "proc_sys_reset_0": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "ip_revision": "16",
+        "xci_name": "design_1_proc_sys_reset_0_0",
+        "xci_path": "ip\\design_1_proc_sys_reset_0_0\\design_1_proc_sys_reset_0_0.xci",
+        "inst_hier_path": "proc_sys_reset_0"
+      }
+    },
+    "nets": {
+      "CLK_0_1": {
+        "ports": [
+          "CLK_0",
+          "clk_wiz_0/clk_in1",
+          "my_vga_project_0/CLK"
+        ]
+      },
+      "RSTN_0_1": {
+        "ports": [
+          "RSTN_0",
+          "clk_wiz_0/resetn",
+          "proc_sys_reset_0/ext_reset_in",
+          "my_vga_project_0/RSTN"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "proc_sys_reset_0/slowest_sync_clk",
+          "my_vga_project_0/PIXEL_CLK"
+        ]
+      },
+      "clk_wiz_0_locked": {
+        "ports": [
+          "clk_wiz_0/locked",
+          "proc_sys_reset_0/dcm_locked"
+        ]
+      },
+      "my_vga_project_0_HSYNC": {
+        "ports": [
+          "my_vga_project_0/HSYNC",
+          "HSYNC_0"
+        ]
+      },
+      "my_vga_project_0_RGB_OUT": {
+        "ports": [
+          "my_vga_project_0/RGB_OUT",
+          "RGB_OUT_0"
+        ]
+      },
+      "my_vga_project_0_VSYNC": {
+        "ports": [
+          "my_vga_project_0/VSYNC",
+          "VSYNC_0"
+        ]
+      },
+      "proc_sys_reset_0_peripheral_aresetn": {
+        "ports": [
+          "proc_sys_reset_0/peripheral_aresetn",
+          "my_vga_project_0/PIXEL_CLK_RSTN"
+        ]
+      }
+    }
+  }
+}
